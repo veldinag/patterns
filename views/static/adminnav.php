@@ -1,0 +1,1 @@
+<a class="admin_link" href="index.php?path=admin/show">Admin panel</a>
