@@ -77,6 +77,9 @@ class AdminController extends BaseController {
         }
     }
 
+    // метод editgoot, как мне кажется, явный пример спагетти-кода
+    // множество ветвлений, условий, сложные проверки
+
     public function editgood($params) {
         $this -> heading .= " | Edit product";
         $good_id = isset($params['id']) ? (int)$params['id'] : 1;
@@ -91,7 +94,6 @@ class AdminController extends BaseController {
                             'status' => 2,
                             'good' => $admin -> getGood($good_id)
                         );
-                        break;
                     case 'change':
                         $filename = $_FILES['img']['name'];
                         $path = "data/img/catalog".$filename;
@@ -129,7 +131,6 @@ class AdminController extends BaseController {
                                 );
                             }    
                         }
-                        //break;
                     case 'delete':
                         if ($admin -> deleteGood($good_id) == 1) {
                             return array(
@@ -144,7 +145,6 @@ class AdminController extends BaseController {
                                 'good' => $admin -> getGood($good_id)
                             );
                         }
-                        //break;
                 }
             } else {
                 return array(
@@ -161,6 +161,9 @@ class AdminController extends BaseController {
             );
         }
     }
+
+    // метод addgoot также пример спагетти-кода
+    // аналогично множество ветвлений, условий, сложные проверки
 
     public function addgood($params) {
         $this -> heading .= " | Add product";

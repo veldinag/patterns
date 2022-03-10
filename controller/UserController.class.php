@@ -16,6 +16,8 @@
             );
         }
 
+        // спагетти-код в методе login - сложные проверки, вложенные условия
+
         public function login($params) {
             $status = isset($params['id']) ? (int)$params['id'] : 0;
             $this -> heading = "Log in";
@@ -78,6 +80,8 @@
                 }
             }
         }
+
+        // спагетти-код в методе reg - сложные проверки, вложенные условия
 
         public function reg($params) {
             $status = isset($params['id']) ? (int)$params['id'] : 0;
