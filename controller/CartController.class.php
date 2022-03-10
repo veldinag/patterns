@@ -19,6 +19,8 @@
             );
         }
 
+        // метод show также признаки спагетти-кода
+
         public function show($params) {
             $this -> getAuthInfo();
             $id = isset($params['id']) ? (int)$params['id'] : 1;
@@ -65,6 +67,8 @@
             }
         }
 
+        // метод del - слегка спагетти!!!
+
         public function del($params) {
             $this -> getAuthInfo();
             $good_id = isset($params['id']) ? (int)$params['id'] : 0;
@@ -92,6 +96,9 @@
                 return null;
             }
         }
+
+        // метод add - также сложные проверки, вложенные условия
+        // спагетти-код
 
         public function add($params) {
             $this -> getAuthInfo();

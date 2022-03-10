@@ -2,6 +2,8 @@
 
     class Catalog {
 
+        // также "слепая вера"
+
         public function getCountOfGoods() {
             $result = DB::getRow("SELECT COUNT(*) AS countOfGoods FROM goods");
             return $result['countOfGoods'];
